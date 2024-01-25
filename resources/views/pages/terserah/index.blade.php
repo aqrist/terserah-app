@@ -20,7 +20,8 @@
         <form method="post" action="/random-choice">
             @csrf
             <div class="mb-3">
-                <label class="form-label">Masukkan pilihan, bisa lebih dari satu (gunakan koma):</label>
+                <label class="form-label">Masukkan pilihan, bisa lebih dari satu (gunakan koma)</label>
+                <label for=""><i>Contoh: Mie Ayam, Bakso</i></label>
                 <input type="text" name="choices" class="form-control" required>
             </div>
             <button type="submit" class="btn btn-primary">Pilih makan dimana</button>
@@ -34,9 +35,8 @@
 
 
         @isset($randomChoice)
-            <h3 class="mt-4">Jadinya makan di:</h3>
-            <p class="lead text-center mb-4">
-                <strong style="text-transform: uppercase;">{{ $randomChoice }}</strong>
+            <p class="lead text-center mb-4 mt-4">
+                Jadinya makan di: <strong style="text-transform: uppercase;"> <b>{{ $randomChoice }}</b></strong>
             </p>
         @endisset
     </div>
