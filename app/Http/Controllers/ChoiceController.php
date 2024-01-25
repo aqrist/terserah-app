@@ -9,13 +9,9 @@ class ChoiceController extends Controller
 {
     public function index()
     {
-        $history = Choice::latest()->paginate(5);
-
-        return view('pages.terserah.index')->with([
-            'history' => $history
-        ]);
+        $history = Choice::paginate(5);
+        return view('pages.terserah.index', compact('history'));
     }
-
 
     public function selectRandom(Request $request)
     {
@@ -30,19 +26,9 @@ class ChoiceController extends Controller
         // Save choice to database
         Choice::create(['choice' => $randomChoice]);
 
-        return redirect('/random-choice')->with([
-            'randomChoice' => $randomChoice,
-            'history' => Choice::latest()->paginate(5),
-        ]);
-    }
-
-    public function returnToPrevious()
-    {
-        $previousChoice = Choice::latest()->first();
-
         return view('pages.terserah.index', [
-            'randomChoice' => $previousChoice ? $previousChoice->choice : null,
-            'history' => Choice::all(),
+            'randomChoice' => $randomChoice,
+            'history' => Choice::paginate(5),
         ]);
     }
 }

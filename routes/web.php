@@ -15,14 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
-Route::get('/', [ChoiceController::class, 'index'])->name('/');
+Route::get('/', [ChoiceController::class, 'index']);
+
+Route::get('/random-choice', [ChoiceController::class, 'index']);
 Route::post('/random-choice', [ChoiceController::class, 'selectRandom']);
-Route::get('/return-to-previous', [ChoiceController::class, 'returnToPrevious']);
 
-Auth::routes(['register' => false]);
+Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
