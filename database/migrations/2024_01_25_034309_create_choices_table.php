@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('choices', function (Blueprint $table) {
             $table->id();
+
+            $table->string('choice')->nullable();
+            $table->string('city')->nullable();
+
+            $table->softDeletes();
             $table->timestamps();
         });
     }

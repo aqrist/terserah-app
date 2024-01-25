@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ChoiceController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +15,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', [ChoiceController::class, 'index'])->name('/');
+Route::post('/random-choice', [ChoiceController::class, 'selectRandom']);
+Route::get('/return-to-previous', [ChoiceController::class, 'returnToPrevious']);
+
 
 Auth::routes();
 
