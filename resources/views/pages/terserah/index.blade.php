@@ -33,10 +33,11 @@
         @endif
 
 
-
         @isset($randomChoice)
-            <h2 class="mt-4">Jadinya makan di:</h2>
-            <p class="lead">{{ $randomChoice }}</p>
+            <h3 class="mt-4">Jadinya makan di:</h3>
+            <p class="lead text-center mb-4">
+                <strong style="text-transform: uppercase;">{{ $randomChoice }}</strong>
+            </p>
         @endisset
     </div>
 
