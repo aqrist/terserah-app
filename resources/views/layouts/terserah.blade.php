@@ -7,17 +7,17 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    
+
     <!-- Meta Description -->
     <meta name="description"
-        content="Aplikasi 'Makan Dimana?' hadir untuk memudahkan Anda dalam menentukan tempat makan dengan pilihan acak.">
+        content="Aplikasi 'Terserah' hadir untuk memudahkan Anda dalam menentukan tempat makan dengan pilihan acak.">
 
     <!-- Meta Keywords -->
     <meta name="keywords"
-        content="Makan Dimana, pilihan makanan acak, keputusan makan, pilihan restoran, eksplorasi kuliner, di mana makan, opsi makanan, aplikasi makan, saran restoran, penemuan tempat makan, keputusan makanan, makan dengan mudah.">
+        content="Terserah, Makan Dimana, pilihan makanan acak, keputusan makan, pilihan restoran, eksplorasi kuliner, di mana makan, opsi makanan, aplikasi makan, saran restoran, penemuan tempat makan, keputusan makanan, makan dengan mudah.">
 
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Terserah') }}</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">

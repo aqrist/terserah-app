@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="container mt-5">
+    <div class="container mt-2">
         <h1 class="mb-4">Mau makan dimana?</h1>
 
 
