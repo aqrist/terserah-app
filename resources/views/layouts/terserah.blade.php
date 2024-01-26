@@ -17,7 +17,7 @@
         content="Terserah, Makan Dimana, pilihan makanan acak, keputusan makan, pilihan restoran, eksplorasi kuliner, di mana makan, opsi makanan, aplikasi makan, saran restoran, penemuan tempat makan, keputusan makanan, makan dengan mudah.">
 
 
-    <title>{{ config('app.name', 'Terserah') }}</title>
+    <title>Terserah. {{ config('app.name', 'Terserah') }}</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">

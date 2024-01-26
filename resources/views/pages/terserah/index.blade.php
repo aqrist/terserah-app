@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="container mt-2">
-        <h1 class="mb-4">Mau makan dimana?</h1>
+        <h1 class="mb-4">Teserah, Mau makan dimana?</h1>
 
 
         @if ($history->count() > 0)
